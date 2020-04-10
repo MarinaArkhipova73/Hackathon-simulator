@@ -17,4 +17,5 @@ public class Coach {
     private Integer inspirationPoints;
     private Integer timePoints;
     private Integer knowledgePoints;
+    private String name;
 }
