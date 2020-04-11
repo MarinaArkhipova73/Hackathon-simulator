@@ -21,4 +21,9 @@ public class UsersServiceImpl implements UsersService {
                 .build();
         usersRepository.save(coach);
     }
+
+    @Override
+    public Coach findByName(String name) {
+        return usersRepository.findByName(name).orElseThrow(IllegalArgumentException::new);
+    }
 }

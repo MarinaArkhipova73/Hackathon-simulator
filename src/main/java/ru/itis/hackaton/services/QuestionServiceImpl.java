@@ -49,4 +49,22 @@ public class QuestionServiceImpl implements QuestionService {
         coach.setKnowledgePoints(knowledge + answer.getKnowledgePoints());
         usersRepository.save(coach);
     }
+
+    @Override
+    public String countPoints(Coach coach) {
+        String result = "";
+        int inspiration = coach.getInspirationPoints();
+        int time = coach.getTimePoints();
+        int knowledge = coach.getKnowledgePoints();
+
+        if (inspiration >= 25 && time >= 20 && knowledge >= 35) {
+            result = "Победа!";
+        } else if (inspiration >= 10 && time >= 15 && knowledge >= 25) {
+            result = "Спасибо за достойное участие!";
+        } else {
+            result = "Вы проиграли!";
+        }
+        return result;
+    }
+
 }

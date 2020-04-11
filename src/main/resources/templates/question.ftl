@@ -22,21 +22,20 @@
 
 </head>
 <body>
-<input type="hidden" id="coachName" value="${coachName}">
-<div class="form-signin">
+<form method="post" class="form-signin">
     <div class="py-5 text-center">
         <h2 class="heading">Вопрос ${question.id}</h2>
         <p class="lead">${question.text}</p>
     </div>
     <div class="form-label-group">
         <#list question.answers as answer>
-            <p><input name="radio" type="radio" value="${answer.id}">${answer.value}</p>
-            </button>
+            <p><input name="answer" type="radio" value="${answer.id}">${answer.value}</p>
         </#list>
-        <button onclick="answer(event)" id="${question.id}" class="btn btn-primary btn-block mx-auto">ОТВЕТИТЬ
+        <button type="submit" id="${question.id}"
+                                               class="btn btn-primary btn-block mx-auto">ОТВЕТИТЬ
+        </button>
     </div>
-</div>
+</form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="application/javascript" src="/js/answer.js"></script>
 </body>
 </html>
