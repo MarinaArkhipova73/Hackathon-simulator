@@ -19,7 +19,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg fixed-top ">
-    <strong style="color: #173d7b; font-size: 1.6rem">КОМАНДА А</strong>
+    <strong style="color: #173d7b; font-size: 1.6rem">Симулятор Хакатона</strong>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -42,14 +42,12 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-sm-6 intro-text">
-                <h1 style="color: darkslategrey; font-size: 4rem">ТЕКСТ -</h1>
-                <h2 style="color: darkslategrey; font-size: 2.6rem">текстмногобуквтекстмног</h2>
-                <h4 class="lead b">текстмногобуквтекстмногобуквтекстмного
-                    буквтекстмногобуквтекстмногобуквтекстмногоб
-                    уквтекстмногобуквтекстмногобуквтекстмногобуквт
-                    екстмногобуквтекстмногобуквтекстмногобукв
-                    текстмногобуквтекстмногобукв</h4>
+            <div class="col-sm-6 intro-text" style="margin-left: -20px">
+                <h1 style="color: darkslategrey; font-size: 3rem"></h1>
+                <h4 style="color: darkslategrey; font-size: 1.4rem; font-weight: 500; line-height: normal"> Современный мир – это мир деятельности, в котором ключевой компетенцией человека становится способность принимать решения в условиях быстро изменяющегося мира.
+                    <br>Симулятор позволяет погрузиться в незнакомую среду, дать возможность эксперементировать и анализировать результаты принятых решений.</h4>
+                <h4 class="lead b" style="font-weight: 400;">Перед вами стоит задача - перевести идеальный замысел в действие - попробовать реализовать в виртуальном мире свою стратегию. Дерзай!
+                </h4>
                 <a role="button" href="/signIn" class="btn btn-primary btn-block">НАЧАТЬ ТЕСТ</a>
             </div>
 

@@ -1,5 +1,6 @@
 package ru.itis.hackaton.services;
 
+import ru.itis.hackaton.dto.ResultDto;
 import ru.itis.hackaton.models.Coach;
 import ru.itis.hackaton.models.Question;
 
@@ -12,5 +13,5 @@ public interface QuestionService {
 
     void calculate(Long answerId, String coachName);
 
-    String countPoints(Coach coach);
+    ResultDto countPoints(Coach coach);
 }

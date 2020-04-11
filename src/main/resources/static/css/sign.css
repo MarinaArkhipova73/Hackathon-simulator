@@ -10,7 +10,7 @@ body {
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #d5ebff;
+    background-color: white;
 }
 
 .p{
@@ -83,7 +83,7 @@ button.btn.btn-primary.btn-block{
     width: 100%;
     margin-bottom: 0;
     line-height: 1.5;
-    color: #495057;
+    color: white;
     pointer-events: none;
     cursor: text;
     border: 1px solid transparent;

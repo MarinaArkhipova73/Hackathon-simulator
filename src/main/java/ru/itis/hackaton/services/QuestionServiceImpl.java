@@ -3,6 +3,7 @@ package ru.itis.hackaton.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import ru.itis.hackaton.dto.ResultDto;
 import ru.itis.hackaton.models.Answer;
 import ru.itis.hackaton.models.Coach;
 import ru.itis.hackaton.models.Question;
@@ -51,7 +52,7 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public String countPoints(Coach coach) {
+    public ResultDto countPoints(Coach coach) {
         String result = "";
         int inspiration = coach.getInspirationPoints();
         int time = coach.getTimePoints();
@@ -64,7 +65,7 @@ public class QuestionServiceImpl implements QuestionService {
         } else {
             result = "Вы проиграли!";
         }
-        return result;
+        return new ResultDto(result, inspiration, time, knowledge);
     }
 
 }

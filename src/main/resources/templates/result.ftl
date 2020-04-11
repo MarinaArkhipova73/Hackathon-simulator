@@ -13,7 +13,25 @@
         <div class="col-8" style="text-align: center">
             <img src="https://img.icons8.com/bubbles/100/000000/bass-drum.png"/>
             <h2 style="margin: 20px">Результаты</h2>
-            <p>${result}</p>
+            <p>${result.text}</p>
+            <br>
+            <table style="margin: auto; border-collapse: separate; border-spacing: 11px 11px;">
+                <tr>
+                    <th></th>
+                    <th> Ваш результат  </th>
+                    <th> Максимальный результат</th>
+                </tr>
+                <tr><td>Мотивация</td><td>${result.inspirationPoints}</td><td>31</td></tr>
+                <tr><td>Время</td><td>${result.timePoints}</td><td>30</td></tr>
+                <tr><td>Знания</td><td>${result.knowledgePoints}</td><td>41</td></tr>
+            </table>
+            <br>
+            <i>Примечание:</i>
+            <p>Для того, чтобы занять 1 место, вам необходимо набрать следующие баллы: </p>
+            <p>>= 25 единиц мотивации, >= 20 единиц свободного времени, >= 35 единиц знаний</p>
+            <p>Для того, чтобы занять 2 - 3 место: </p>
+            <p>>= 10 единиц мотивации, >= 15 единиц свободного времени, >= 25 единиц знаний</p>
+            <p>В остальных случаях ваша цель - занять лидирующие места на Хакатоне - провалена!</p>
         </div>
     </div>
 </div>
