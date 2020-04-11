@@ -18,11 +18,12 @@ public class Answer {
     private Integer timePoints;
     private Integer inspirationPoints;
     private Integer knowledgePoints;
+    private String value;
 
     @ManyToMany
     @JoinTable(
             name = "question_answer",
-            joinColumns = @JoinColumn(name = "question_id"),
-            inverseJoinColumns = @JoinColumn(name = "answer_id"))
+            joinColumns = @JoinColumn(name = "answer_id"),
+            inverseJoinColumns = @JoinColumn(name = "question_id"))
     private List<Question> questionList;
 }
