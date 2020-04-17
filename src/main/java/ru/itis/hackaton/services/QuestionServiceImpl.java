@@ -58,9 +58,9 @@ public class QuestionServiceImpl implements QuestionService {
         int time = coach.getTimePoints();
         int knowledge = coach.getKnowledgePoints();
 
-        if (inspiration >= 25 && time >= 20 && knowledge >= 35) {
+        if (inspiration >= 30 && time >= 20 && knowledge >= 27) {
             result = "Победа!";
-        } else if (inspiration >= 10 && time >= 15 && knowledge >= 25) {
+        } else if (inspiration >= 20 && time >= 10 && knowledge >= 20) {
             result = "Спасибо за достойное участие!";
         } else {
             result = "Вы проиграли!";

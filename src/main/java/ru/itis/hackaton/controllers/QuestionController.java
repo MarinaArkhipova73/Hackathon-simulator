@@ -42,9 +42,13 @@ public class QuestionController {
         Question question = (Question) session.getAttribute("question");
         questionService.calculate(answerId, coachName);
         Long id = question.getId();
-        id++;
+        if (id == 3 && answerId == 9) {
+            id+=2;
+        } else {
+            id++;
+        }
         Coach coach = usersService.findByName(coachName);
-        if (id == 6) {
+        if (id == 9) {
             session.setAttribute("result", questionService.countPoints(coach));
             return "redirect:/result";
         }
