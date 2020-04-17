@@ -1,7 +1,6 @@
 package ru.itis.hackaton.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,17 +11,22 @@ import ru.itis.hackaton.services.UsersService;
 import javax.servlet.http.HttpSession;
 
 @Controller
+@RequestMapping(path = "signIn")
 public class SignInController {
 
-    @Autowired
     private UsersService usersService;
 
-    @GetMapping(path = "/signIn")
+    @Autowired
+    public SignInController(UsersService usersService) {
+        this.usersService = usersService;
+    }
+
+    @GetMapping
     public String getSignInPage() {
         return "signin";
     }
 
-    @PostMapping(path = "/signIn")
+    @PostMapping
     public String signIn(@RequestParam(name = "username") String userName, HttpSession session) {
         session.setAttribute("user", userName);
         usersService.addUser(userName);
